@@ -16,12 +16,12 @@ enum GameState:Int {
 
 
 class Tetris: NSObject {
-    // Notification
+    // Notifications
     static var LineClearNotification                   = "LineClearNotification"
     static var GameStateChangeNotification             = "GameStateChangeNotification"
     
     var gameView:GameView!
-//    var gameTimer:GameTimer!
+    var gameTimer:GameTimer!
     
     var gameState = GameState.stop
     
@@ -36,7 +36,7 @@ class Tetris: NSObject {
     }
     
     fileprivate func initGame() {
-//        self.gameTimer = GameTimer(target: self, selector: #selector(Swiftris.gameLoop))
+        self.gameTimer = GameTimer(target: self, selector: #selector(Tetris.gameLoop))
         
         self.addLongPressAction(#selector(Tetris.longPressed(_:)), toView:self.gameView.gameBoard)
         
@@ -49,7 +49,7 @@ class Tetris: NSObject {
         self.stop()
         self.removeGameStateChangeNotificationAction()
         
-//        self.gameTimer = nil
+        self.gameTimer = nil
         self.gameView = nil
     }
     
@@ -96,24 +96,21 @@ class Tetris: NSObject {
     }
     
     func gameLoop() {
-//        self.update()
+        self.update()
         self.gameView.setNeedsDisplay()
     }
-//    fileprivate func update() {
-//        
-////        self.gameTimer.counter += 1
-//        
-//        if self.gameTimer.counter%10 == 9 {
-//            let game = self.gameView.gameBoard.update()
-//            if game.isGameOver {
-//                self.gameOver()
-//                return
-//            }
-//            if game.droppedBrick {
-//                self.soundManager.dropBrick()
-//            }
-//        }
-//    }
+    fileprivate func update() {
+        
+        self.gameTimer.counter += 1
+        
+        if self.gameTimer.counter%10 == 9 {
+            let game = self.gameView.gameBoard.update()
+            if game.isGameOver {
+                self.gameOver()
+                return
+            }
+        }
+    }
     
     fileprivate func prepare() {
         self.gameView.prepare()
@@ -121,21 +118,21 @@ class Tetris: NSObject {
     }
     fileprivate func play() {
         self.gameState = GameState.play
-//        self.gameTimer.start()
+        self.gameTimer.start()
     }
     fileprivate func pause() {
         self.gameState = GameState.pause
-//        self.gameTimer.pause()
+        self.gameTimer.pause()
     }
     fileprivate func stop() {
         self.gameState = GameState.stop
-//        self.gameTimer.pause()        
+        self.gameTimer.pause()        
         self.gameView.clear()
     }
     
     fileprivate func gameOver() {
         self.gameState = GameState.stop
-//        self.gameTimer.pause()
+        self.gameTimer.pause()
         
     }
     

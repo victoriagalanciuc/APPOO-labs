@@ -20,6 +20,8 @@
 		84E5DE49203388E2009A6CEC /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE48203388E2009A6CEC /* GameButton.swift */; };
 		84E5DE4B20339D58009A6CEC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE4A20339D58009A6CEC /* GameView.swift */; };
 		84E5DE4D20339E2E009A6CEC /* Tetris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE4C20339E2E009A6CEC /* Tetris.swift */; };
+		84E5DE4F2033A158009A6CEC /* TetrisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE4E2033A158009A6CEC /* TetrisViewController.swift */; };
+		84E5DE512033A1A5009A6CEC /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE502033A1A5009A6CEC /* GameTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		84E5DE48203388E2009A6CEC /* GameButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		84E5DE4A20339D58009A6CEC /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		84E5DE4C20339E2E009A6CEC /* Tetris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetris.swift; sourceTree = "<group>"; };
+		84E5DE4E2033A158009A6CEC /* TetrisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrisViewController.swift; sourceTree = "<group>"; };
+		84E5DE502033A1A5009A6CEC /* GameTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			children = (
 				84E5DE14203377F8009A6CEC /* AppDelegate.swift */,
 				84E5DE16203377F8009A6CEC /* ViewController.swift */,
+				84E5DE4E2033A158009A6CEC /* TetrisViewController.swift */,
+				84E5DE502033A1A5009A6CEC /* GameTimer.swift */,
 				84E5DE18203377F8009A6CEC /* Main.storyboard */,
 				84E5DE42203378F9009A6CEC /* Shape.swift */,
 				84E5DE48203388E2009A6CEC /* GameButton.swift */,
@@ -284,6 +290,8 @@
 				84E5DE17203377F8009A6CEC /* ViewController.swift in Sources */,
 				84E5DE43203378F9009A6CEC /* Shape.swift in Sources */,
 				84E5DE15203377F8009A6CEC /* AppDelegate.swift in Sources */,
+				84E5DE512033A1A5009A6CEC /* GameTimer.swift in Sources */,
+				84E5DE4F2033A158009A6CEC /* TetrisViewController.swift in Sources */,
 				84E5DE4B20339D58009A6CEC /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
