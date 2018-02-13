@@ -14,7 +14,7 @@ class GameTimer: NSObject {
     
     init(target:AnyObject, selector:Selector) {
         self.displayLink = CADisplayLink(target: target, selector: selector)
-        self.displayLink.preferredFramesPerSecond = 2
+        self.displayLink.frameInterval = 2
         self.displayLink.isPaused = true
         self.displayLink.add(to: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
     }

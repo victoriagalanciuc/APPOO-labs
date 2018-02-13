@@ -31,7 +31,6 @@ class GameView: UIView {
         self.rotateButton.translatesAutoresizingMaskIntoConstraints = false
         self.stopButton.translatesAutoresizingMaskIntoConstraints = false
         self.gameButton.translatesAutoresizingMaskIntoConstraints = false
-        
         self.gameButton.addTarget(self, action: #selector(GameView.changeGameState(_:)), for: UIControlEvents.touchUpInside)
 
         self.stopButton.addTarget(self, action: #selector(GameView.gameStop(_:)), for: UIControlEvents.touchUpInside)
@@ -160,35 +159,35 @@ class GameView: UIView {
     
     
     func gameStop(_ sender:UIButton) {
-//        NotificationCenter.default.post(
-//            name: Notification.Name(rawValue: Swiftris.GameStateChangeNotification),
-//            object: nil,
-//            userInfo: ["gameState":NSNumber(value: GameState.stop.rawValue as Int)]
-//        )
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Tetris.GameStateChangeNotification),
+            object: nil,
+            userInfo: ["gameState":NSNumber(value: GameState.stop.rawValue as Int)]
+        )
     }
     
     func changeGameState(_ sender:UIButton) {
-//        sender.isSelected = !sender.isSelected
-//        let gameState = self.update(sender.isSelected)
-//        
-//        NotificationCenter.default.post(
-//            name: Notification.Name(rawValue: Swiftris.GameStateChangeNotification),
-//            object: nil,
-//            userInfo: ["gameState":NSNumber(value: gameState.rawValue as Int)]
-//        )
+        sender.isSelected = !sender.isSelected
+        let gameState = self.update(sender.isSelected)
+        
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Tetris.GameStateChangeNotification),
+            object: nil,
+            userInfo: ["gameState":NSNumber(value: gameState.rawValue as Int)]
+        )
     }
     
     @discardableResult
     func update(_ selected:Bool) -> GameState {
-//        var gameState = GameState.play
-//        if selected {
-//            gameState = GameState.play
-//            self.gameButton.setTitle("Pause", for: UIControlState())
-//        } else {
-//            gameState = GameState.pause
-//            self.gameButton.setTitle("Play", for: UIControlState())
-//        }
-//        return gameState
+        var gameState = GameState.play
+        if selected {
+            gameState = GameState.play
+            self.gameButton.setTitle("Pause", for: UIControlState())
+        } else {
+            gameState = GameState.pause
+            self.gameButton.setTitle("Play", for: UIControlState())
+        }
+        return gameState
     }
     
     func clear() {

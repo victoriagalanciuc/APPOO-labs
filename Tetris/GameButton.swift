@@ -8,10 +8,10 @@
 
 import UIKit
 
-class GameButton: UIView {
+class GameButton: UIButton {
     convenience init(title:String, frame: CGRect) {
         self.init(frame: frame)
-//        self.setTitle(title, for: UIControlState())
+        self.setTitle(title, for: UIControlState())
     }
     
     override init(frame: CGRect) {
@@ -26,8 +26,8 @@ class GameButton: UIView {
     
     fileprivate func initializeView() {
         self.backgroundColor = UIColor.clear
-//        self.setTitleColor(UIColor.white, for: UIControlState())
-//        self.titleLabel?.font = UIFont(name: "Helvetica", size: 20)
+        self.setTitleColor(UIColor.white, for: UIControlState())
+        self.titleLabel?.font = UIFont(name: "Helvetica", size: 16)
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 2
         self.layer.cornerRadius = 5

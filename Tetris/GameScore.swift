@@ -10,7 +10,6 @@ import UIKit
 
 class GameScore: UIView {
 
-    var gameLevel = 0
     var lineClearCount = 0
     var gameScore = 0
     
@@ -55,7 +54,7 @@ class GameScore: UIView {
         
         self.addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "[selfView]-(<=0)-[level]",
+                withVisualFormat: "[selfView]-(<=0)-[score]",
                 options: NSLayoutFormatOptions.alignAllCenterY,
                 metrics: nil,
                 views: views)
@@ -86,7 +85,6 @@ class GameScore: UIView {
     }
     
     func clear() {
-        self.gameLevel = 0
         self.lineClearCount = 0
         self.gameScore = 0
         self.update()
