@@ -12,8 +12,8 @@ class GameView: UIView {
     
     var gameScore = GameScore(frame:CGRect.zero)
     var gameBoard = GameBoard(frame:CGRect.zero)
-    var gameButton = GameButton(title: "Play", frame: CGRect.zero)
-    var stopButton = GameButton(title: "Stop", frame: CGRect.zero)
+    fileprivate var gameButton = GameButton(title: "Play", frame: CGRect.zero)
+    fileprivate var stopButton = GameButton(title: "Stop", frame: CGRect.zero)
     var rotateButton = GameButton(title: "R", frame: CGRect.zero)
     
     init(_ superView:UIView) {
@@ -32,9 +32,9 @@ class GameView: UIView {
         self.stopButton.translatesAutoresizingMaskIntoConstraints = false
         self.gameButton.translatesAutoresizingMaskIntoConstraints = false
         
-//        self.gameButton.addTarget(self, action: #selector(GameView.changeGameState(_:)), for: UIControlEvents.touchUpInside)
-//        
-//        self.stopButton.addTarget(self, action: #selector(GameView.gameStop(_:)), for: UIControlEvents.touchUpInside)
+        self.gameButton.addTarget(self, action: #selector(GameView.changeGameState(_:)), for: UIControlEvents.touchUpInside)
+
+        self.stopButton.addTarget(self, action: #selector(GameView.gameStop(_:)), for: UIControlEvents.touchUpInside)
         
         
         self.addSubview(self.gameBoard)

@@ -19,6 +19,7 @@
 		84E5DE47203383F0009A6CEC /* GameScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE46203383F0009A6CEC /* GameScore.swift */; };
 		84E5DE49203388E2009A6CEC /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE48203388E2009A6CEC /* GameButton.swift */; };
 		84E5DE4B20339D58009A6CEC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE4A20339D58009A6CEC /* GameView.swift */; };
+		84E5DE4D20339E2E009A6CEC /* Tetris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5DE4C20339E2E009A6CEC /* Tetris.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		84E5DE46203383F0009A6CEC /* GameScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScore.swift; sourceTree = "<group>"; };
 		84E5DE48203388E2009A6CEC /* GameButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		84E5DE4A20339D58009A6CEC /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		84E5DE4C20339E2E009A6CEC /* Tetris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetris.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				84E5DE48203388E2009A6CEC /* GameButton.swift */,
 				84E5DE4420337F4C009A6CEC /* GameBoard.swift */,
 				84E5DE4A20339D58009A6CEC /* GameView.swift */,
+				84E5DE4C20339E2E009A6CEC /* Tetris.swift */,
 				84E5DE46203383F0009A6CEC /* GameScore.swift */,
 				84E5DE1B203377F8009A6CEC /* Assets.xcassets */,
 				84E5DE1D203377F8009A6CEC /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 			files = (
 				84E5DE4520337F4C009A6CEC /* GameBoard.swift in Sources */,
 				84E5DE49203388E2009A6CEC /* GameButton.swift in Sources */,
+				84E5DE4D20339E2E009A6CEC /* Tetris.swift in Sources */,
 				84E5DE47203383F0009A6CEC /* GameScore.swift in Sources */,
 				84E5DE17203377F8009A6CEC /* ViewController.swift in Sources */,
 				84E5DE43203378F9009A6CEC /* Shape.swift in Sources */,
