@@ -42,11 +42,6 @@ class GameBoard: UIView {
     
     func generateShape() {
         self.currentShape = Shape.generate()
-        
-//        NotificationCenter.default.post(
-//            name: Notification.Name(rawValue: Swiftris.NewBrickDidGenerateNotification),
-//            object: nil
-//        )
     }
     
     
@@ -162,11 +157,11 @@ class GameBoard: UIView {
             self.board.insert(self.generateRow(), at: 0)
         }
         
-//        NotificationCenter.default.post(
-//            name: Notification.Name(rawValue: Swiftris.LineClearNotification),
-//            object: nil,
-//            userInfo: ["lineCount":NSNumber(value: lineCount as Int)]
-//        )
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Tetris.LineClearNotification),
+            object: nil,
+            userInfo: ["lineCount":NSNumber(value: lineCount as Int)]
+        )
     }
     
     func updateX(_ x:Int) {

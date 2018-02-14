@@ -202,7 +202,7 @@ class GameView: UIView {
     }
     
     func clearButtons() {
-//        self.gameButton.isSelected = false
-//        self.update(self.gameButton.isSelected)
+        self.gameButton.isSelected = false
+        self.update(self.gameButton.isSelected)
     }
 }

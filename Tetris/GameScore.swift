@@ -60,10 +60,10 @@ class GameScore: UIView {
                 views: views)
         )
         
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(GameScore.lineClear(_:)),
-//                                               name: NSNotification.Name(rawValue: Swiftris.LineClearNotification),
-//                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(GameScore.lineClear(_:)),
+                                               name: NSNotification.Name(rawValue: Tetris.LineClearNotification),
+                                               object: nil)
     }
     
     func lineClear(_ noti:Notification) {
